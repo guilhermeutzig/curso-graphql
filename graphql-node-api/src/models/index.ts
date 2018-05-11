@@ -22,7 +22,7 @@ console.log('Basename: ', basename);
 
 
 // Pegando o ambiente
-const env: string = process.env.NODE_ENV || 'development';
+const env: string = process.env.NODE_ENV.trim() || 'development';
 
 // Encontrando o arquivo de configuração do Sequelize
 let config = require(path.resolve(`${__dirname}./../config/config.json`))[env];
